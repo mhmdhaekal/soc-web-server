@@ -24,7 +24,6 @@ FROM base AS release
 COPY --from=install /temp/prod/node_modules ./node_modules
 COPY --from=prerelease /app/app ./app
 COPY --from=prerelease /app/drizzle ./drizzle
-COPY --from=prerelease /app/migrate.ts ./migrate.ts
 COPY --from=prerelease /app/package.json ./package.json
 COPY --from=prerelease /app/index.ts ./index.ts
 
